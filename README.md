@@ -3,7 +3,7 @@
 ## Sobre Listas Dinâmicas Simplesmente Encadeadas, implementar os seguintes métodos: 
 
   - [x] Inserir elemento em uma determinada posição na lista - inserirPosicao(valor, posicao)
-  - [ ] Remover elemento em uma determinada posição na lista - removerPosicao(posicao)
+  - [x] Remover elemento em uma determinada posição na lista - removerPosicao(posicao)
   - [ ] Remover todas as ocorrências de um determinado elemento na lista - removerTodas(valor)
   - [ ] Inserir um elemento após determinado elemento - inserirApos(valor1, valor2)
     ```

@@ -70,6 +70,20 @@ class Ldse:
             self.ult = aux
         self.quant -= 1
 
+    def removerPosicao(self, posicao):
+        if not self.estaVazia():
+            aux = ant = self.prim
+            if posicao == 0:
+                self.removerInicio()
+            else:
+                for i in range(self.quant):
+                    if i == posicao:
+                        ant.prox = aux.prox
+                        self.quant -= 1
+                        break
+                    ant = aux
+                    aux = aux.prox
+
     def removerElemento(self, valor):
         if self.quant == 1:
             if (self.prim.info == valor):
