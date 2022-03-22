@@ -48,6 +48,8 @@ class Ldse:
                     if i == posicao:
                         ant.prox = No(valor, aux)
                         self.quant += 1
+                        if aux.prox == None:
+                            self.ult = aux
                         break
                     ant = aux
                     aux = aux.prox
@@ -84,11 +86,30 @@ class Ldse:
                     ant = aux
                     aux = aux.prox
 
+    def removerTodas(self, valor):
+        if not self.estaVazia():
+            if self.quant == 1:
+                if self.prim.info == valor:
+                    self.prim = self.ult = None
+                    self.quant -= 1
+            else:
+                aux = ant = self.prim
+                for i in range(self.quant):
+                    if i == 0 and aux.info == valor:
+                        self.removerInicio()
+                    ## TODO - Fazer caso de uso
+                    # else:
+                    #     if aux.info == valor:
+                    #         ant.prox = aux.prox
+                    #         self.quant -= 1
+                    # ant = aux
+                    # aux = aux.prox
+
     def removerElemento(self, valor):
         if self.quant == 1:
-            if (self.prim.info == valor):
+            if self.prim.info == valor:
                 self.prim = self.ult = None
-                quant -= 1
+                self.quant -= 1
         else:
             aux = ant = self.prim
             while aux.prox != None and aux.info != valor:
