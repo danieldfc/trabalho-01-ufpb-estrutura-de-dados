@@ -17,3 +17,19 @@
   - [ ] Trocar um elemento em uma determinada posição na lista por outro elemento - trocar(posicao, novovalor)
   - [ ] Consultar o elemento anterior a um determinado elemento na lista - consultarAnterior(valor)
   - [ ] Contar quantidade de elementos pares na lista - contarPares()
+
+## Para executar:
+
+Entre em qual pasta gostaria de testar e execute:
+```sh
+cd ./lista-dinamica-simplesmente-encadeada
+```
+
+Execute o arquivo principal da pasta:
+```sh
+python3 main.py
+```
+
+> OBS.: Possa ser que você não tenha instalado o python3 então, verifique no seu sistema a compatibilidade
+
+[Download Python](https://www.python.org/downloads/)
