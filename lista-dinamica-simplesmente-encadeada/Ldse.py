@@ -37,6 +37,21 @@ class Ldse:
             self.ult.prox = self.ult = No(valor, None)
         self.quant += 1
 
+    def inserirPosicao(self, valor, posicao):
+        if not self.estaVazia():
+            aux = ant = self.prim
+            for i in range(self.quant+1):
+                if posicao == 0:
+                    self.inserirInicio(valor)
+                    break
+                else:
+                    if i == posicao:
+                        ant.prox = No(valor, aux)
+                        self.quant += 1
+                        break
+                    ant = aux
+                    aux = aux.prox
+
     def removerInicio(self):
         if self.quant == 1:
             self.prim = self.ult = None
