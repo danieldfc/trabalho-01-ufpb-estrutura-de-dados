@@ -97,13 +97,12 @@ class Ldse:
                 for i in range(self.quant):
                     if i == 0 and aux.info == valor:
                         self.removerInicio()
-                    ## TODO - Fazer caso de uso
-                    # else:
-                    #     if aux.info == valor:
-                    #         ant.prox = aux.prox
-                    #         self.quant -= 1
-                    # ant = aux
-                    # aux = aux.prox
+                        aux = ant = self.prim
+                    else:
+                        if aux.info == valor:
+                            self.removerElemento(valor)
+                        ant = aux
+                        aux = aux.prox
 
     def removerElemento(self, valor):
         if self.quant == 1:
