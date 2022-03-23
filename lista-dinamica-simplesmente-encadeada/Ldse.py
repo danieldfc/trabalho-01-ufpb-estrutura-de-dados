@@ -54,6 +54,19 @@ class Ldse:
                     ant = aux
                     aux = aux.prox
 
+    def somarElementos(self):
+        if not self.estaVazia():
+            soma = 0
+            aux = self.prim
+            for i in range(self.quant):
+                soma += aux.info
+                aux = aux.prox
+            return soma
+        return 0
+
+    def inserirApos(self, valor1, valor2):
+        print('TODO - Fazer incrementação do código aqui')
+
     def removerInicio(self):
         if self.quant == 1:
             self.prim = self.ult = None
@@ -129,3 +142,11 @@ class Ldse:
             print(aux.info, end=' ')
             aux = aux.prox
         print()
+
+if __name__ == '__main__':
+    lista = Ldse()
+
+    lista.inserirInicio(3)
+    lista.inserirInicio(2)
+    lista.inserirInicio(1)
+    print(lista.somarElementos())

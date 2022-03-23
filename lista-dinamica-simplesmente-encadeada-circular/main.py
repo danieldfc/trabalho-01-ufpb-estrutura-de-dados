@@ -25,21 +25,3 @@ lista.removerFim()
 lista.removerFim()
 lista.removerFim()
 print('Remove todos os elementos')
-
-## Somar elementos numéricos
-
-print('Adiciona 1 - 2 - 3')
-lista.inserirInicio(3)
-lista.inserirInicio(2)
-lista.inserirInicio(1)
-print('Lista 1 - 2 - 3')
-lista.imprimir()
-print('A soma de todos os elementos da lista é:', lista.somarElementos())
-
-lista.inserirFim(5)
-print('Lista 1 - 2 - 3 - 5')
-lista.imprimir()
-lista.inserirApos(3, 4)
-print('Lista 1 - 2 - 3 - 4 - 5')
-lista.imprimir()
-print('A soma de todos os elementos da lista é:', lista.somarElementos())

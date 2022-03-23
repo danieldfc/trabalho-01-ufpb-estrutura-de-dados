@@ -23,16 +23,6 @@ class Ldsec:
         if not self.estaVazia():
             return self.ult.info
 
-    def somarElementos(self):
-        if not self.estaVazia():
-            soma = 0
-            aux = self.prim
-            for i in range(self.quant):
-                soma += aux.info
-                aux = aux.prox
-            return soma
-        return 0
-
     def inserirInicio(self, valor):
         if self.quant == 0:
             self.prim = self.ult = No(valor, None)
@@ -50,9 +40,6 @@ class Ldsec:
                     aux.info = novovalor
                     break
                 aux = aux.prox
-
-    def inserirApos(self, valor1, valor2):
-        print('TODO - Fazer incrementação do código aqui')
 
     def inserirFim(self, valor):
         if self.quant == 0:
