@@ -65,7 +65,19 @@ class Ldse:
         return 0
 
     def inserirApos(self, valor1, valor2):
-        print('TODO - Fazer incrementação do código aqui')
+        if not self.estaVazia():
+            if self.quant == 1:
+                if self.prim.info == valor1:
+                    self.prim.prox = self.ult = No(valor2, None)
+                    self.quant += 1
+            else:
+                print('TODO - Adicionar lógica se a lista tiver mais de 1 item')
+                print('Forma de fazer:')
+                print('- Criar o anterior e o auxiliar como sendo o primeiro elemento')
+                print('- Criar um for sobre a quantidade de elementos')
+                print('- Criar verificação de informação do elemento anterior seja igual ao valor1')
+                print('  - Se for igual o próximo do anterior deverá receber No novo sendo o próximo o auxiliar')
+                print('  - Se não alterar o valor do anterior = auxiliar e o auxiliar = o seu próximo element')
 
     def removerInicio(self):
         if self.quant == 1:
@@ -142,11 +154,3 @@ class Ldse:
             print(aux.info, end=' ')
             aux = aux.prox
         print()
-
-if __name__ == '__main__':
-    lista = Ldse()
-
-    lista.inserirInicio(3)
-    lista.inserirInicio(2)
-    lista.inserirInicio(1)
-    print(lista.somarElementos())
