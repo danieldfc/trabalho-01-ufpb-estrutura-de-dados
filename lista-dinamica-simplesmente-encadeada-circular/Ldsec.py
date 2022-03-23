@@ -23,6 +23,16 @@ class Ldsec:
         if not self.estaVazia():
             return self.ult.info
 
+    def somarElementos(self):
+        if not self.estaVazia():
+            soma = 0
+            aux = self.prim
+            for i in range(self.quant):
+                soma += aux.info
+                aux = aux.prox
+            return soma
+        return 0
+
     def inserirInicio(self, valor):
         if self.quant == 0:
             self.prim = self.ult = No(valor, None)
