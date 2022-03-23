@@ -18,7 +18,13 @@
   - [ ] Consultar o elemento anterior a um determinado elemento na lista - consultarAnterior(valor)
   - [ ] Contar quantidade de elementos pares na lista - contarPares()
 
-## Para executar:
+## Para clonar este repositório
+
+```
+git clone https://github.com/danieldfc/trabalho-01-ufpb-estrutura-de-dados.git
+```
+
+## Para executar
 
 Entre em qual pasta gostaria de testar e execute:
 ```sh
@@ -33,3 +39,23 @@ python3 main.py
 > OBS.: Possa ser que você não tenha instalado o python3 então, verifique no seu sistema a compatibilidade
 
 [Download Python](https://www.python.org/downloads/)
+
+## Enviar as alterações para o remoto
+
+Adicione suas linhas de código, logo depois:
+
+```
+git add --all
+```
+
+Adicione suas linhas de código, logo depois:
+
+```sh
+git commit -m "Adicione uma mensagem"
+```
+
+Envie suas alterações para o remoto:
+
+```sh
+git push origin main
+```
