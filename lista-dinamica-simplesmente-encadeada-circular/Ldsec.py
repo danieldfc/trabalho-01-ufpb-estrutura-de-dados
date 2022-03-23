@@ -32,6 +32,15 @@ class Ldsec:
             self.ult.prox = self.prim
         self.quant += 1
 
+    def trocar(self, posicao, novovalor):
+        if not self.estaVazia():
+            aux = self.prim
+            for i in range(self.quant):
+                if i == posicao:
+                    aux.info = novovalor
+                    break
+                aux = aux.prox
+
     def inserirFim(self, valor):
         if self.quant == 0:
             self.prim = self.ult = No(valor, None)

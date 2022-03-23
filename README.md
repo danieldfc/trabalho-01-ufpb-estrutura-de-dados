@@ -14,7 +14,7 @@
 
 ## Sobre Listas Dinâmicas Simplesmente Encadeadas Circulares, implementar os seguintes métodos:
 
-  - [ ] Trocar um elemento em uma determinada posição na lista por outro elemento - trocar(posicao, novovalor)
+  - [x] Trocar um elemento em uma determinada posição na lista por outro elemento - trocar(posicao, novovalor)
   - [ ] Consultar o elemento anterior a um determinado elemento na lista - consultarAnterior(valor)
   - [ ] Contar quantidade de elementos pares na lista - contarPares()
 
