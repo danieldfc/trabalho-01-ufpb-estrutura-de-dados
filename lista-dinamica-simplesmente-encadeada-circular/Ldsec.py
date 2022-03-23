@@ -49,6 +49,14 @@ class Ldsec:
             self.ult.prox = self.ult = No(valor, self.prim)
         self.quant += 1
 
+    def consultarAnterior (self, valor):
+        aux = ant = self.prim
+        for i in range (self.quant):
+            if aux.info == valor:
+                return ant.info 
+            ant = aux
+            aux = aux.prox
+
     def removerInicio(self):
         if self.quant == 1:
             self.prim = self.ult = None
