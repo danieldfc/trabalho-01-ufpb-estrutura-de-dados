@@ -51,6 +51,9 @@ class Ldsec:
                     break
                 aux = aux.prox
 
+    def inserirApos(self, valor1, valor2):
+        print('TODO - Fazer incrementação do código aqui')
+
     def inserirFim(self, valor):
         if self.quant == 0:
             self.prim = self.ult = No(valor, None)
