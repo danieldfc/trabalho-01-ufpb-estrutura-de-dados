@@ -1,3 +1,7 @@
+from itertools import count
+from sre_constants import CATEGORY_UNI_NOT_SPACE
+
+
 class No:
     def __init__(self, info, proximo):
         self.info = info
@@ -154,3 +158,17 @@ class Ldse:
             print(aux.info, end=' ')
             aux = aux.prox
         print()
+
+
+    def contarPares (self):
+        if not self.estaVazia ():
+            aux = self.prim
+            count = 0
+            for i in range (self.quant):
+                if aux.info % 2 == 0:
+                    count += 1 
+                aux = aux.prox
+            return count
+        else:
+            return 0
+
