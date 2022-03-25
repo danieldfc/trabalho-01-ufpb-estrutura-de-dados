@@ -1,5 +1,6 @@
 from itertools import count
 from sre_constants import CATEGORY_UNI_NOT_SPACE
+from xml.dom.minidom import Element
 
 
 class No:
@@ -75,13 +76,14 @@ class Ldse:
                     self.prim.prox = self.ult = No(valor2, None)
                     self.quant += 1
             else:
-                print('TODO - Adicionar lógica se a lista tiver mais de 1 item')
-                print('Forma de fazer:')
-                print('- Criar o anterior e o auxiliar como sendo o primeiro elemento')
-                print('- Criar um for sobre a quantidade de elementos')
-                print('- Criar verificação de informação do elemento anterior seja igual ao valor1')
-                print('  - Se for igual o próximo do anterior deverá receber No novo sendo o próximo o auxiliar')
-                print('  - Se não alterar o valor do anterior = auxiliar e o auxiliar = o seu próximo element')
+                aux = ant = self.prim
+                for i in range(self.quant + 1):
+                    if ant.info == valor1:
+                        self.quant += 1
+                        ant.prox = No(valor2, aux)
+                        break
+                    ant = aux
+                    aux = aux.prox
 
     def removerInicio(self):
         if self.quant == 1:
